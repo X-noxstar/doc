@@ -1,4 +1,4 @@
-<?php
+ <?php
 @ini_set('output_buffering', 0);
 @ini_set('display_errors', 0);
 set_time_limit(0);
